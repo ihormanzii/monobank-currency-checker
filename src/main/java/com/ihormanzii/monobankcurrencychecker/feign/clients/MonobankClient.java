@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(
-        value = "monobank",
-        url = "https://api.monobank.ua",
-        configuration = FeignConfig.class)
+@FeignClient(value = "monobank", url = "https://api.monobank.ua", configuration = FeignConfig.class)
 public interface MonobankClient {
 
     @GetMapping(path = "/bank/currency")
